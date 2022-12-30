@@ -1,16 +1,23 @@
 
 
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title></title>
 		<style type="text/css">
+			body{
+			<div class="one">
+			style=" background:url (.background.jpg);"
+				background-size: 1280px 720px;
+		        </div>	
+			}
 			table{
 				line-height: 30px;
 				margin: 150px;
 				font-size: 18px;
-				font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+				font-family: Microsoft YaHei UI;
 			}
 		</style>
 	</head>
@@ -27,7 +34,7 @@
 					<tr>
 						<td>密码:</td>
 						<td>
-							<input type="password" id="psword" placeholder="请输入不低于8位的密码"onblur="myPsword()"/>
+							<input type="password" id="psword" placeholder="请输入不低于6位的密码"onblur="myPsword()"/>
 							<font color="purple" id="psword-tip"></font>
 						</td>
 					</tr>
@@ -50,9 +57,9 @@
 					<tr>
 						<td>性格:</td>
 						<td>
-							<input type="checkbox" name="hobby" value="热情大方"/>机灵古怪
-							<input type="checkbox" name="hobby" value="温柔体贴"/>好人
-							<input type="checkbox" name="hobby" value="多愁善感"/>坏人
+							<input type="checkbox" name="hobby" value="热情大方"/>热情大方
+							<input type="checkbox" name="hobby" value="温柔体贴"/>温柔体贴
+							<input type="checkbox" name="hobby" value="多愁善感"/>多愁善感
 						</td>
 					</tr>
 					<tr>
@@ -65,16 +72,21 @@
 					<tr>
 						<td>简介:</td>
 						<td>
-							<input type="text" id="me" placeholder="选填"/>
+							<input type="text" id="myself" placeholder="选填"/>
 						</td>
 					</tr>
 					<tr>
 						<td>城市:</td>
 						<td>
 							<select id="city">
-								<option value="德阳市">德阳市</option>
 								<option value="成都市">成都市</option>
-								<option value="重庆市">重庆市</option>
+								<option value="北京市">北京市</option>
+								<option value="广元市">广元市</option>
+								<option value="都江堰市">都江堰市</option>
+								<option value="巴中市">巴中市</option>
+								<option value="眉山市">眉山市</option>
+								<option value="宜宾市">宜宾市</option>
+								<option value="遂宁市">遂宁市</option>
 							</select>
 						</td>
 					</tr>
@@ -94,7 +106,7 @@
 			if(use == null || use == ""){
 				tip.innerHTML = '姓名不能为空！';
 			}else{
-				tip.innerHTML = "<font color='green'>成功！</font>"
+				tip.innerHTML = "<font color='green'>输入合法！</font>"
 			}
 		}
 		function myPsword(){
@@ -103,7 +115,7 @@
 			if(mima.length <6 || mima == ""){
 				tip2.innerHTML = "密码不低于6位！";
 			}else{
-				tip2.innerHTML = "<font color='green'>成功！</font>"
+				tip2.innerHTML = "<font color='green'>密码合法！</font>"
 			}
 		}
 		function mySub(){
